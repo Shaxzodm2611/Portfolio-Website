@@ -5,7 +5,7 @@ import './navbar.scss'
 import { images } from '../../constants'
 
 const Navbar = () => {
-  const [Toggle, setToggle] = useState(true)
+  const [Toggle, setToggle] = useState(false)
   return (
     <nav className="app__navbar">
       <div className='app__navbar-logo'>
@@ -22,6 +22,8 @@ const Navbar = () => {
 
       <div className='app__navbar-menu'>
         <HiMenuAlt4 onClick={() => setToggle(true)} />
+
+
         {Toggle && (
           <motion.div
             whileInView={{ x: [300, 0] }}
